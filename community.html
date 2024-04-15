@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+
+      <meta charset="UTF-8">
+      <meta name="viewport" width=device-width, initial-scale=1.0>
+      <title>Fundexion</title>
+
+
+      <style>
+
+      	 	.alata-regular {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+      	#pro {
+      		background:linear-gradient(to right, red, blue) no-repeat, fixed;
+      		}
+
+      	#Hi {
+      		background-color:black;
+      		align-content:top;
+      		display: flex;
+            justify-content: space-between;
+            align-items: center;
+      	}
+      	
+      	h1 {
+      		text-align:left;
+      		vertical-align:middle;
+      		right:30px;
+      		marign-right:auto;
+      		background: linear-gradient(to left, red, blue);
+            -webkit-background-clip: text; /* for Safari */
+            background-clip: text;
+            color: transparent;
+            font-family: "Alata", sans-serif;
+      	}
+
+
+
+      	#Upd {
+      		padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: "Alata", sans-serif;
+        }
+
+        #Upd:hover {
+        	background-color:#0056b3;
+        }
+
+        #Upd:active {
+        	background-color:#003d80;
+        }
+
+        #iv {
+        	display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #Btn {
+        	background-color:white;
+        	align-content:center;
+        	color:black;
+        	marign-right:20px;
+        	padding:10px 25px;
+        	    font-family: "Alata", sans-serif;
+     
+        }
+
+        #Btn:first-child {
+        	marign-left:0;
+        }
+
+          #Btn:hover {
+        	background-color:#0056b3;
+        }
+
+        #Btn:active {
+        	background-color:#003d80;
+        }
+          body, html {
+  height: 100%;
+  margin: 0;
+  font-family: "Alata", sans-serif;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#chat-window {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#chat-messages {
+  margin-bottom: 10px;
+}
+
+#message-input {
+  width: calc(100% - 70px);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#send-btn {
+  width: 60px;
+  padding: 10px;
+}
+
+      </style>> 
+     
+</head>
+<body id="pro">
+	<div id="Hi">
+		<br>
+      <h1><big><b>Fundexion</b></big></h1>
+      <button id="Upd">Updates</button>
+      <br>
+    </div>
+    
+    <div id="iv">
+            <button id="Btn" onclick="window.location.href='Fundexion.html'">Home</button>
+            <button id="Btn" onclick="window.location.href='Service.html'">Service</button>
+            <button id="Btn" onclick="window.location.href='Info.html'">Info</button>
+            <button id="Btn" onclick="window.location.href='Updates.html'">Updates</button>
+            <button id="Btn" onclick="window.location.href='Community.html'">Community</button>
+            <button id="Btn" onclick="window.location.href='Contact.html'">Contact</button>
+    </div>
+
+     <div id="pro">
+    <div id="chat-window">
+      <div id="chat-messages"></div>
+    </div>
+    <input type="text" id="message-input" placeholder="Type your message...">
+    <button id="send-btn">Send</button>
+  </div>
+
+<script>document.addEventListener("DOMContentLoaded", function() {
+  const messageInput = document.getElementById("message-input");
+  const sendBtn = document.getElementById("send-btn");
+  const chatMessages = document.getElementById("chat-messages");
+
+  sendBtn.addEventListener("click", function() {
+    const messageText = messageInput.value.trim();
+    if (messageText !== "") {
+      const messageElement = document.createElement("div");
+      messageElement.textContent = messageText;
+      chatMessages.appendChild(messageElement);
+      messageInput.value = "";
+      // You can send the message to the server here and handle real-time communication
+    }
+  });
+
+  // Additional functionality to handle receiving messages from the server and displaying them in the chat window can be added here
+});
+
+window.alert ("Your Chat Will Not Be Save") </script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyACfCm8eU3y6rjqL8Lg3uZliVkOY8M7Hbo",
+    authDomain: "fundexion.firebaseapp.com",
+    projectId: "fundexion",
+    storageBucket: "fundexion.appspot.com",
+    messagingSenderId: "789399893562",
+    appId: "1:789399893562:web:ca3e8c771e38613569a703",
+    measurementId: "G-P96ZQBZFRV"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>

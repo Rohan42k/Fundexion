@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+
+      <meta charset="UTF-8">
+      <meta name="viewport" width=device-width, initial-scale=1.0>
+      <title>Fundexion</title>
+
+
+      <style>
+
+      	 	.alata-regular {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+      	body {
+      		background:linear-gradient(to right, red, blue) no-repeat, fixed;
+      		}
+
+      	#Hi {
+      		background-color:black;
+      		align-content:top;
+      		display: flex;
+            justify-content: space-between;
+            align-items: center;
+      	}
+      	
+      	h1 {
+      		text-align:left;
+      		vertical-align:middle;
+      		right:30px;
+      		marign-right:auto;
+      		background: linear-gradient(to left, red, blue);
+            -webkit-background-clip: text; /* for Safari */
+            background-clip: text;
+            color: transparent;
+            font-family: "Alata", sans-serif;
+      	}
+
+
+
+      	#Upd {
+      		padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: "Alata", sans-serif;
+        }
+
+        #Upd:hover {
+        	background-color:#0056b3;
+        }
+
+        #Upd:active {
+        	background-color:#003d80;
+        }
+
+        #iv {
+        	display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #Btn {
+        	background-color:white;
+        	align-content:center;
+        	color:black;
+        	marign-right:20px;
+        	padding:10px 25px;
+        	    font-family: "Alata", sans-serif;
+     
+        }
+
+        #Btn:first-child {
+        	marign-left:0;
+        }
+
+          #Btn:hover {
+        	background-color:#0056b3;
+        }
+
+        #Btn:active {
+        	background-color:#003d80;
+        }
+
+        .abu {
+          color: white;
+            font-family: "Alata", sans-serif;
+      }
+
+      </style>> 
+     
+</head>
+<body">
+	<div id="Hi">
+		<br>
+      <h1><big><b>Fundexion</b></big></h1>
+      <button id="Upd">Updates</button>
+      <br>
+    </div>
+    
+    <div id="iv">
+            <button id="Btn" onclick="window.location.href='fundexion.html'">Home</button>
+            <button id="Btn" onclick="window.location.href='service.html'">Service</button>
+            <button id="Btn" onclick="window.location.href='info.html'">Info</button>
+            <button id="Btn" onclick="window.location.href='updates.html'">Updates</button>
+            <button id="Btn" onclick="window.location.href='Community.html'">Community</button>
+            <button id="Btn" onclick="window.location.href='Contact.html'">Contact</button>
+    </div>
+
+    <h1 class="abu">Updates----></h1>
+    <h3 class="abu">About Our Upcoming App</h3>
+    <p class="abu">Introducing Fundexion: Your Personal Finance Companion
+
+Are you ready to take control of your finances and achieve your financial goals? Look no further than Fundexion – the ultimate finance-helping app designed to empower you on your journey towards financial freedom.
+
+Features:
+
+Budget Tracking: Say goodbye to financial guesswork! With Fundexion, you can easily set up and track your budget across various categories. Visualize your spending habits and identify areas where you can save and optimize.
+
+Expense Management: Keep your expenses in check with our intuitive expense tracking feature. Record your transactions on the go, categorize them effortlessly, and gain insights into your spending patterns.
+
+Goal Setting: Dream big and achieve even bigger with Fundexion. Set financial goals – whether it's saving for a vacation, buying a home, or paying off debt – and track your progress every step of the way.
+
+Bill Reminders: Never miss a bill payment again! Fundexion sends you timely reminders for upcoming bills and helps you stay on top of your financial obligations.
+
+Financial Insights: Unlock valuable insights into your financial health with personalized reports and analysis. Understand where your money is going, identify trends, and make informed decisions to improve your financial well-being.
+
+Secure Data Storage: Rest easy knowing that your financial information is safe and secure with Fundexion. We prioritize your privacy and employ industry-standard security measures to protect your data.
+
+Customizable Dashboard: Tailor your Fundexion experience to suit your unique needs and preferences. Customize your dashboard layout, add widgets, and prioritize the features that matter most to you.
+
+Why Choose Fundexion?
+
+User-Friendly Interface: Our app is designed with simplicity and usability in mind, making it easy for users of all levels to navigate and utilize its features effectively.
+
+Personalized Recommendations: Receive personalized recommendations and tips based on your financial goals and spending habits, helping you make smarter financial decisions.
+
+Continuous Updates and Support: We're committed to delivering regular updates and providing top-notch customer support to ensure that your experience with Fundexion is always seamless and hassle-free.
+
+Community Engagement: Join a thriving community of like-minded individuals who are on a similar financial journey. Share insights, learn from others, and stay motivated to achieve your goals together.
+
+Ready to transform your financial future? Download Fundexion today and embark on a journey towards financial empowerment!</p>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyACfCm8eU3y6rjqL8Lg3uZliVkOY8M7Hbo",
+    authDomain: "fundexion.firebaseapp.com",
+    projectId: "fundexion",
+    storageBucket: "fundexion.appspot.com",
+    messagingSenderId: "789399893562",
+    appId: "1:789399893562:web:ca3e8c771e38613569a703",
+    measurementId: "G-P96ZQBZFRV"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
